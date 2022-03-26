@@ -6,7 +6,7 @@
 - [Install](#install)
     - [Kaldi](#Kaldi)
     - [Dataset](#Dataset)
-    - [Pretrain model](#Pretrain model)
+    - [Pretrain model](#Pretrain_model)
 - [Usage](#usage)
     - [Inference](###Inference)
     
@@ -29,7 +29,7 @@ import kora.install.kaldi
 ```
 ### Dataset
 1. Download Callhome sph dataset via this [link](https://drive.google.com/drive/folders/1-LlaDXJrUyM23pF7pXWimKZTwG-EzDUt?usp=sharing)
-### Pretrain model
+### Pretrain_model
 1. Download the kaldi's pre-trained CALLHOME x-vector diarization model via this [link](https://kaldi-asr.org/models/m6) and decompress:
 ```sh
 $ tar -xvf /your/path/to/0006_callhome_diarization_v2_1a.tar
