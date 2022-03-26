@@ -8,7 +8,7 @@
     - [Dataset](#Dataset)
     - [Pretrain model](#Pretrain_model)
 - [Usage](#usage)
-    - [Inference](###Inference)
+    - [Inference](#Inference)
     
 
 ## Install
