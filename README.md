@@ -41,7 +41,7 @@ $ cp -r /your/path/to/0006_callhome_diarization_v2_1a/exp/xvector_nnet_1a <KALDI
 
 ## Usage
 
-###Inference
+### Inference
 ```sh
 #Go to project folder
 $ cd /kaldi-master/egs/callhome_diarization/v2
