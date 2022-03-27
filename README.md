@@ -125,6 +125,12 @@ $ cp /path/to/this/repo/train.sh <KALDI_ROOT>/egs/callhome_diarization/v2
 data_root=/your/path/containing/all/the/corpus/needed
 nj=Number of your CPUs
 ```
+4. Execute the `<train.sh>` recipe step-by-step as shown below:
+```sh
+#Repeat until 4th stage in run.sh has been executed:
+$ ./run.sh
+#Now increment the stage variable on top of run.sh by 1
+```
 ## License
 
 [MIT](LICENSE) © Richard Littauer
