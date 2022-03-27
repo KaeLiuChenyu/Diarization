@@ -9,6 +9,7 @@
     - [Pretrain model](#Pretrain_model)
 - [Usage](#usage)
     - [Inference](#Inference)
+    - [Train](#Train)
     
 
 ## Install
@@ -29,6 +30,17 @@ import kora.install.kaldi
 ```
 ### Dataset
 1. Download Callhome sph dataset via this [link](https://drive.google.com/drive/folders/1-LlaDXJrUyM23pF7pXWimKZTwG-EzDUt?usp=sharing)
+2. Training datasets:
+```sh
+#  - SRE
+#    LDC2006S44 LDC2011S01 LDC2011S04 LDC2011S09 
+#    LDC2011S10 LDC2012S01 LDC2011S05 LDC2011S08 
+#  - SwitchBord
+#    LDC99S79 LDC2002S06 LDC2001S13 LDC2004S07 
+#  - musan
+#    MUSAN(https://www.openslr.org/17/)
+```
+
 ### Pretrain_model
 1. Download the kaldi's pre-trained CALLHOME x-vector diarization model via this [link](https://kaldi-asr.org/models/m6) and decompress:
 ```sh
@@ -82,6 +94,36 @@ $ ./run.sh
 ```sh
 Using supervised calibration, DER: 8.58% (no overlap)
 Using supervised calibration, DER: 18.02% (overlap)
+```
+### Train
+```sh
+#Go to project folder
+$ cd /kaldi-master/egs/callhome_diarization/v2
+```
+1. Edit `<cmd.sh>`
+
+ * If you have no queueing system and want to run on a local machine, you can open `<cmd.sh>` file and change 'queue.pl' to 'run.pl'.
+2. Edit `<path.sh>`
+
+ * If you have other Kaldi root, open `<path.sh>`:
+```sh
+export KALDI_ROOT=`pwd`/../../..
+...
+```
+Then change `<KALDI_ROOT>` to your own Kaldi root:
+```sh
+export KALDI_ROOT=/your/path/to/kaldi-master
+...
+```
+3. Edit `<train.sh>`
+ * Download and move `<train.sh>` in this report to project folder:
+```sh
+$ cp /path/to/this/repo/train.sh <KALDI_ROOT>/egs/callhome_diarization/v2
+```
+ * Makding following chages to the top of the script:
+```sh
+data_root=/your/path/containing/all/the/corpus/needed
+nj=Number of your CPUs
 ```
 ## License
 
